@@ -1,0 +1,24 @@
+{
+	"name": "eslint-config-vbase",
+	"version": "0.0.1",
+	"description": "ESLint config for Javascript, by Venryx.",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Venryx/eslint-config-vbase.git"
+	},
+	"keywords": [
+		"javascript",
+		"eslint"
+	],
+	"author": {
+		"name": "Venryx",
+		"email": "venryx@gmail.com",
+		"url": "http://venryx.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Venryx/eslint-config-vbase/issues"
+	},
+	"homepage": "https://github.com/Venryx/eslint-config-vbase"
+}

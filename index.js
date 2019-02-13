@@ -49,32 +49,56 @@ module.exports = {
 		"TEST": false,*/
 	},
 	rules: {
-		"indent": ["error", "tab"],
-		"no-tabs": 0,
-		"import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-		"max-len": "off",
+		// fixes
+		"strict": [1, "never"], // fix for extraneous (and incorrect) entry for "strict" rule in airbnb-base/index.js
 		"padded-blocks": "off", // disabled since it incorrectly perceives a commented first-line as being an empty line
-		"lines-between-class-members": "off",
-		"no-param-reassign": "off",
-		"import/prefer-default-export": "off",
-		"camelcase": "off",
-		"strict": ["error", "never"], // fix for extraneous (and incorrect) entry for "strict" rule in airbnb-base/index.js
 		"dot-notation": "off", // disabling this lets us access custom properties on window (dot notation throws TS error, and if this were enabled, you couldn't use bracket notation either)
-		"no-underscore-dangle": ["error", {"allow": ["__webpack_require__", "_key", "_id"]}], // lets us access some special variables/properties
-		"no-console": "off", // lets us use console.log, etc.
 		"object-curly-newline": "off", // fixes that eslint would complain about vscode's import reformatting, when more than 3 variables were imported from a single file
-		"no-restricted-syntax": [0, "ForOfStatement"], // allow for-of loops for now
-		"no-continue": "off",
 		"import/no-useless-path-segments": "off", // disabled because vs-code's auto-import tool doesn't always write paths matching eslint's "fewest segments" criteria
-		"class-methods-use-this": "off", // class-methods do not need to "use this" to be valid/useful -- for example: React's componentDidMount
+
+		// rule disablings
+		"no-tabs": 0,
+		"max-len": "off",
+		"lines-between-class-members": "off",
+		"import/prefer-default-export": "off",
+		"no-param-reassign": "off",
+		"camelcase": "off",
+		"no-underscore-dangle": "off",
+		"no-continue": "off",
+		"no-console": "off", // lets us use console.log, etc.
 		"object-property-newline": "off",
-		"no-use-before-define": ["error", { "functions": false, "classes": false }],
-		"sort-imports": "off", // there are a couple places (eg Main_Hot.tsx) where changing the import order will cause errors
 		"arrow-body-style": "off",
 		"no-await-in-loop": "off",
 		"func-names": "off",
+		"no-floating-decimal": "off",
+		"no-return-assign": "off",
+		"no-use-before-define": "off",
+		"spaced-comment": "off",
+		"eqeqeq": "off",
+		"no-var": 0,
+		"vars-on-top": 0,
+		"no-unused-vars": "off",
+		"no-plusplus": "off",
+		"sort-imports": "off", // there are a couple places (eg Main_Hot.tsx) where changing the import order will cause errors
+		"class-methods-use-this": "off", // class-methods do not need to "use this" to be valid/useful -- for example: React's componentDidMount
+		"no-undef": "off", // handled by typescript
+		//"react/react-in-jsx-scope": "off", // React is added as a global in my projects
+		"no-empty-pattern": "off",
+		"no-alert": "off",
+		"no-restricted-globals": "off",
+
+		// customizations
+		"indent": [2, "tab"],
+		"import/no-extraneous-dependencies": [1, {"devDependencies": true}],
+		"no-restricted-syntax": [0, "ForOfStatement"], // allow for-of loops for now
+		"no-use-before-define": [1, { "functions": false, "classes": false }],
+		"object-curly-spacing": [1, "never"],
+		"eol-last": [1, "never"],
+		"space-before-function-paren": [1, "never"],
+		"quotes": [1, "double"],
+		"arrow-spacing": [1, {"before": false, "after": false}],
 	},
-	globals: {
+	/*globals: {
 		ENV: true,
 		ENV_SHORT: true,
 		DEV: true,
@@ -91,5 +115,8 @@ module.exports = {
 		store: true,
 		ToJSON: true,
 		FromJSON: true,
+	},*/
+	globals: {
+		React: true,
 	},
 };

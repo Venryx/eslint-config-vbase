@@ -86,17 +86,32 @@ module.exports = {
 		"no-empty-pattern": "off",
 		"no-alert": "off",
 		"no-restricted-globals": "off",
+		"radix": "off",
+		//"no-use-before-define": [1, { "functions": false, "classes": false }],
+		"no-use-before-define": "off",
+		"react/jsx-indent": "off",
+		"react/display-name": "off",
+		"no-nested-ternary": "off",
+		"operator-linebreak": "off",
+		"no-debugger": "off",
+		"consistent-return": "off",
+		"no-empty": "off",
+		"no-trailing-spaces": "off",
 
 		// customizations
-		"indent": [2, "tab"],
+		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)
+		"indent": [2, "tab", {
+			"flatTernaryExpressions": true,
+			"ignoredNodes": [":not(:statement):not(:expression):not(:declaration):not(:function):not(:pattern)"]
+		}],
 		"import/no-extraneous-dependencies": [1, {"devDependencies": true}],
 		"no-restricted-syntax": [0, "ForOfStatement"], // allow for-of loops for now
-		"no-use-before-define": [1, { "functions": false, "classes": false }],
 		"object-curly-spacing": [1, "never"],
 		"eol-last": [1, "never"],
 		"space-before-function-paren": [1, "never"],
 		"quotes": [1, "double"],
 		"arrow-spacing": [1, {"before": false, "after": false}],
+		"arrow-parens": [1, "as-needed"],
 	},
 	/*globals: {
 		ENV: true,

@@ -61,6 +61,7 @@ module.exports = {
 		"max-len": "off",
 		"lines-between-class-members": "off",
 		"import/prefer-default-export": "off",
+		"import/no-mutable-exports": "off",
 		"no-param-reassign": "off",
 		"camelcase": "off",
 		"no-underscore-dangle": "off",
@@ -96,7 +97,9 @@ module.exports = {
 		"no-debugger": "off",
 		"consistent-return": "off",
 		"no-empty": "off",
-		"no-trailing-spaces": "off",
+		//"no-trailing-spaces": "off",
+		"no-lonely-if": "off",
+		"newline-per-chained-call": "off",
 
 		// customizations
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)

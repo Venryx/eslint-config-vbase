@@ -20,5 +20,8 @@
 	"bugs": {
 		"url": "https://github.com/Venryx/eslint-config-vbase/issues"
 	},
-	"homepage": "https://github.com/Venryx/eslint-config-vbase"
+	"homepage": "https://github.com/Venryx/eslint-config-vbase",
+	"peerDependencies": {
+		"@typescript-eslint/parser": "^1.4.2"
+	}
 }

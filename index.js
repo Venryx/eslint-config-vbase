@@ -1,10 +1,11 @@
 module.exports = {
 	extends: [
 		"airbnb-base",
+		//"plugin:@typescript-eslint/eslint-plugin",
 		"plugin:react/recommended",
 		//"plugin:jsx-a11y/recommended",
 	],
-	parser: "typescript-eslint-parser",
+	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		ecmaVersion: 8,
 		sourceType: "module",
@@ -21,21 +22,6 @@ module.exports = {
 		"only-warn",
 	],
 	settings: {
-		//"import/extensions": [".js", ".jsx", ".ts", ".tsx"],
-		"import/resolver": {
-			"webpack": {
-				"config": "./Scripts/Build/WebpackConfig.js",
-			},
-			"node": {
-				"paths": ["Source"],
-				"extensions": [
-				  ".js",
-				  ".jsx",
-				  ".ts",
-				  ".tsx",
-				]
-			 }
-		},
 		"react": {
 			"version": "detect", // to avoid warning
 		},
@@ -45,11 +31,6 @@ module.exports = {
 		"commonjs": true,
 		"es6": true,
 		"node": true
-	},
-	globals : {
-		/*"DEV": false,
-		"PROD": false,
-		"TEST": false,*/
 	},
 	rules: {
 		// fixes

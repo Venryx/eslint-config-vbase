@@ -35,7 +35,10 @@ module.exports = {
 				  ".tsx",
 				]
 			 }
-		}
+		},
+		"react": {
+			"version": "detect", // to avoid warning
+		},
 	},
 	env: {
 		"browser": true,

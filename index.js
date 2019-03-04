@@ -84,6 +84,9 @@ module.exports = {
 		//"no-trailing-spaces": "off",
 		"no-lonely-if": "off",
 		"newline-per-chained-call": "off",
+		"import/export": "off", // it thinks typescript function-overloads are multiple exports
+		"one-var": "off",
+		"one-var-declaration-per-line": "off",
 
 		// customizations
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)

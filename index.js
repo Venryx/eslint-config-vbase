@@ -100,7 +100,7 @@ module.exports = {
 		"object-curly-spacing": [1, "never"],
 		"eol-last": [1, "never"],
 		"space-before-function-paren": [1, "never"],
-		"quotes": [1, "double"],
+		"quotes": [1, "double", {"avoidEscape": true, "allowTemplateLiterals": true}],
 		"arrow-spacing": [1, {"before": false, "after": false}],
 		"arrow-parens": [1, "as-needed"],
 	},

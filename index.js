@@ -88,6 +88,7 @@ module.exports = {
 		"one-var": "off",
 		"one-var-declaration-per-line": "off",
 		"no-inner-declarations": "off",
+		"no-void": "off",
 
 		// customizations
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)

@@ -39,6 +39,8 @@ module.exports = {
 		"dot-notation": "off", // disabling this lets us access custom properties on window (dot notation throws TS error, and if this were enabled, you couldn't use bracket notation either)
 		"object-curly-newline": "off", // fixes that eslint would complain about vscode's import reformatting, when more than 3 variables were imported from a single file
 		"import/no-useless-path-segments": "off", // disabled because vs-code's auto-import tool doesn't always write paths matching eslint's "fewest segments" criteria
+		"no-useless-constructor": "off", // fixes lint-parser bug for constructor-overloads
+		"no-dupe-class-members": "off", // fixes eslint thinking ts method-overloads are duplicate members
 
 		// rule disablings
 		"no-tabs": 0,
@@ -92,6 +94,7 @@ module.exports = {
 		// "return await SomeAsyncFunc()" can be useful: returning a promise effectively "awaits" it, so being able to add/keep that (unnecessary) "await" keyword makes it explicit.
 		//		Doing so makes the visual inspection of return statements consistent with regular function calls: if you don't see the await keyword, we're not "waiting on" that function, to progress to the next line
 		"no-return-await": "off",
+		"max-classes-per-file": "off",
 
 		// customizations
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)

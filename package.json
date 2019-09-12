@@ -23,5 +23,8 @@
 	"homepage": "https://github.com/Venryx/eslint-config-vbase",
 	"peerDependencies": {
 		"@typescript-eslint/parser": "^1.4.2"
+	},
+	"dependencies": {
+		"eslint-config-airbnb-base": "^14.0.0"
 	}
 }

@@ -95,6 +95,7 @@ module.exports = {
 		//		Doing so makes the visual inspection of return statements consistent with regular function calls: if you don't see the await keyword, we're not "waiting on" that function, to progress to the next line
 		"no-return-await": "off",
 		"max-classes-per-file": "off",
+		"block-scoped-var": "off",
 
 		// customizations
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)

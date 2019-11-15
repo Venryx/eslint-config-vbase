@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-vbase",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "ESLint config for Javascript, by Venryx.",
 	"main": "index.js",
 	"repository": {
@@ -21,10 +21,10 @@
 		"url": "https://github.com/Venryx/eslint-config-vbase/issues"
 	},
 	"homepage": "https://github.com/Venryx/eslint-config-vbase",
-	"peerDependencies": {
-		"@typescript-eslint/parser": "^1.4.2"
-	},
+	"peerDependencies": {},
 	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.7.0",
+		"@typescript-eslint/parser": "^2.7.0",
 		"eslint-config-airbnb-base": "^14.0.0"
 	}
 }

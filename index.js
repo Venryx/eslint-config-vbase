@@ -15,6 +15,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		"@typescript-eslint",
 		"import",
 		"react",
 		//"jsx-a11y", // warns about accessibility concerns

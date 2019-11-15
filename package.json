@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-vbase",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"description": "ESLint config for Javascript, by Venryx.",
 	"main": "index.js",
 	"repository": {
@@ -25,6 +25,7 @@
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.7.0",
 		"@typescript-eslint/parser": "^2.7.0",
-		"eslint-config-airbnb-base": "^14.0.0"
+		"eslint-config-airbnb-base": "^14.0.0",
+		"eslint-plugin-react-hooks": "^2.3.0"
 	}
 }

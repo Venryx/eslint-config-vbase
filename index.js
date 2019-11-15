@@ -1,7 +1,6 @@
 module.exports = {
 	extends: [
 		"airbnb-base",
-		//"plugin:@typescript-eslint/eslint-plugin",
 		"plugin:react/recommended",
 		//"plugin:jsx-a11y/recommended",
 	],
@@ -11,13 +10,15 @@ module.exports = {
 		sourceType: "module",
 		ecmaFeatures: {
 			jsx: true,
-			modules: true
+			modules: true,
+			//legacyDecorators: true,
 		}
 	},
 	plugins: [
 		"@typescript-eslint",
 		"import",
 		"react",
+		"react-hooks",
 		//"jsx-a11y", // warns about accessibility concerns
 		//"babel",
 		"only-warn",

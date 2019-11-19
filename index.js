@@ -98,6 +98,7 @@ module.exports = {
 		"no-return-await": "off",
 		"max-classes-per-file": "off",
 		"block-scoped-var": "off",
+		"prefer-destructuring": "off", // too many false positives (eg. vars *meant* as single-field access/alias)
 
 		// customizations
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)

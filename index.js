@@ -43,6 +43,17 @@ module.exports = {
 		"import/no-useless-path-segments": "off", // disabled because vs-code's auto-import tool doesn't always write paths matching eslint's "fewest segments" criteria
 		"no-useless-constructor": "off", // fixes lint-parser bug for constructor-overloads
 		"no-dupe-class-members": "off", // fixes eslint thinking ts method-overloads are duplicate members
+		// fixes that airbnb-base restricts extensions to js files
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+			  "js": "never",
+			  "jsx": "never",
+			  "ts": "never",
+			  "tsx": "never"
+			}
+		],
 
 		// rule disablings
 		"no-tabs": 0,

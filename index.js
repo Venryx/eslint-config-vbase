@@ -56,7 +56,7 @@ module.exports = {
 		],
 
 		// rule disablings
-		"no-tabs": 0,
+		"no-tabs": "off",
 		"max-len": "off",
 		"lines-between-class-members": "off",
 		"import/prefer-default-export": "off",
@@ -75,8 +75,8 @@ module.exports = {
 		"no-use-before-define": "off",
 		"spaced-comment": "off",
 		"eqeqeq": "off",
-		"no-var": 0,
-		"vars-on-top": 0,
+		"no-var": "off",
+		"vars-on-top": "off",
 		"no-unused-vars": "off",
 		"no-plusplus": "off",
 		"sort-imports": "off", // there are a couple places (eg Main_Hot.tsx) where changing the import order will cause errors
@@ -110,6 +110,7 @@ module.exports = {
 		"max-classes-per-file": "off",
 		"block-scoped-var": "off",
 		"prefer-destructuring": "off", // too many false positives (eg. vars *meant* as single-field access/alias)
+		"no-multi-assign": "off", // limited cases where useful, but still some
 
 		// customizations
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)

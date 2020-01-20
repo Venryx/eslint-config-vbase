@@ -126,6 +126,10 @@ module.exports = {
 		"quotes": [1, "double", {"avoidEscape": true, "allowTemplateLiterals": true}],
 		"arrow-spacing": [1, {"before": false, "after": false}],
 		"arrow-parens": [1, "as-needed"],
+
+		// plugins
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": ["warn", { "additionalHooks": "(Use(Memo|Callback|Effect)|Watch)" }]
 	},
 	/*globals: {
 		ENV: true,

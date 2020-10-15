@@ -21,11 +21,21 @@
 		"url": "https://github.com/Venryx/eslint-config-vbase/issues"
 	},
 	"homepage": "https://github.com/Venryx/eslint-config-vbase",
-	"peerDependencies": {},
+	"peerDependencies": {
+		"typescript": "^4.0.0",
+		"eslint": "^7.0.0"
+	},
+	"devDependencies": {
+		"typescript": "^4.0.0",
+		"eslint": "^7.0.0"
+	},
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^2.15.0",
 		"@typescript-eslint/parser": "^2.15.0",
 		"eslint-config-airbnb-base": "^14.0.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-only-warn": "^1.0.2",
+		"eslint-plugin-react": "^7.21.4",
 		"eslint-plugin-react-hooks": "^2.3.0"
 	}
 }

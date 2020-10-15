@@ -24,6 +24,17 @@ module.exports = {
 		"only-warn",
 	],
 	settings: {
+		"import/resolver": {
+			node: {
+				paths: ["Source"],
+				extensions: [
+					".js",
+					".jsx",
+					".ts",
+					".tsx",
+				],
+			},
+		},
 		"react": {
 			"version": "detect", // to avoid warning
 		},

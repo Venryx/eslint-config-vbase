@@ -137,6 +137,7 @@ module.exports = {
 		"quotes": [1, "double", {"avoidEscape": true, "allowTemplateLiterals": true}],
 		"arrow-spacing": [1, {"before": false, "after": false}],
 		"arrow-parens": [1, "as-needed"],
+		"no-trailing-spaces": [1, {"ignoreComments": true}], // needed for markdown line-break controlling in jsdoc comments
 
 		// plugins
 		"react-hooks/rules-of-hooks": "error",

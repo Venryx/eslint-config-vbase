@@ -34,6 +34,7 @@ module.exports = {
 					".tsx",
 				],
 			},
+			//typescript: {}, // enable usage of eslint-import-resolver-typescript
 		},
 		"react": {
 			"version": "detect", // to avoid warning
@@ -55,17 +56,20 @@ module.exports = {
 		"no-useless-constructor": "off", // fixes lint-parser bug for constructor-overloads
 		"no-dupe-class-members": "off", // fixes eslint thinking ts method-overloads are duplicate members
 		// fixes that airbnb-base restricts extensions to js files
-		/*"import/extensions": [
+		"import/extensions": [
 			"error",
 			"ignorePackages",
 			{
-			  "js": "",
+			  "js": "never",
 			  "jsx": "never",
 			  "ts": "never",
 			  "tsx": "never"
 			}
-		],*/
-		"import/extensions": "off", // disabled for now, since some repos (eg. libs) use ".js", whereas others (eg. websites) use no-extension
+		],
+		// disabled for now, since some repos (eg. libs) use ".js", whereas others (eg. websites) use no-extension
+		//"import/extensions": "off",
+		// disabled for now, since I couldn't get eslint-import-resolver-typescript to work (to resolve ".js"-not-resolving-to-ts issue) [it's not that useful anyway; TS generally tells of missing files]
+		"import/no-unresolved": "off",
 
 		// rule disablings
 		"no-tabs": "off",

@@ -55,16 +55,17 @@ module.exports = {
 		"no-useless-constructor": "off", // fixes lint-parser bug for constructor-overloads
 		"no-dupe-class-members": "off", // fixes eslint thinking ts method-overloads are duplicate members
 		// fixes that airbnb-base restricts extensions to js files
-		"import/extensions": [
+		/*"import/extensions": [
 			"error",
 			"ignorePackages",
 			{
-			  "js": "never",
+			  "js": "",
 			  "jsx": "never",
 			  "ts": "never",
 			  "tsx": "never"
 			}
-		],
+		],*/
+		"import/extensions": "off", // disabled for now, since some repos (eg. libs) use ".js", whereas others (eg. websites) use no-extension
 
 		// rule disablings
 		"no-tabs": "off",

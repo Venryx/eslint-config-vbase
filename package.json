@@ -1,7 +1,7 @@
 {
 	"name": "eslint-config-vbase",
 	"description": "ESLint config for Javascript, by Venryx.",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"author": "Venryx (https://venryx.com)",
 	"main": "index.js",
 	"license": "MIT",

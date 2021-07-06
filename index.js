@@ -47,7 +47,9 @@ module.exports = {
 		"node": true
 	},
 	rules: {
-		// fixes
+		// fixes (eg. rule disablings due to detection not working properly)
+		// ==========
+
 		"strict": [1, "never"], // fix for extraneous (and incorrect) entry for "strict" rule in airbnb-base/index.js
 		"padded-blocks": "off", // disabled since it incorrectly perceives a commented first-line as being an empty line
 		"dot-notation": "off", // disabling this lets us access custom properties on window (dot notation throws TS error, and if this were enabled, you couldn't use bracket notation either)
@@ -56,22 +58,22 @@ module.exports = {
 		"no-useless-constructor": "off", // fixes lint-parser bug for constructor-overloads
 		"no-dupe-class-members": "off", // fixes eslint thinking ts method-overloads are duplicate members
 		// fixes that airbnb-base restricts extensions to js files
-		"import/extensions": [
-			"error",
-			"ignorePackages",
-			{
-			  "js": "never",
-			  "jsx": "never",
-			  "ts": "never",
-			  "tsx": "never"
-			}
-		],
+		"import/extensions": ["error", "ignorePackages"],
 		// disabled for now, since some repos (eg. libs) use ".js", whereas others (eg. websites) use no-extension
 		//"import/extensions": "off",
 		// disabled for now, since I couldn't get eslint-import-resolver-typescript to work (to resolve ".js"-not-resolving-to-ts issue) [it's not that useful anyway; TS generally tells of missing files]
 		"import/no-unresolved": "off",
+		"prefer-destructuring": "off", // too many false positives (eg. vars *meant* as single-field access/alias)
+		"import/no-extraneous-dependencies": "off", // too many false-positives (eg. for monorepo setup in dm repo)
+		"sort-imports": "off", // there are a couple places (eg Main_Hot.tsx) where changing the import order will cause errors
+		"import/export": "off", // it thinks TS func-overloads are multiple exports
+		"no-redeclare": "off", // it thinks TS func-overloads are redeclares
+		"no-shadow": "off", // it thinks TS enums shadow themselves
+      "@typescript-eslint/no-shadow": ["warn"], // use the ts-specific rule instead
 
-		// rule disablings
+		// rule disablings (for preferences)
+		// ==========
+
 		"no-tabs": "off",
 		"max-len": "off",
 		"lines-between-class-members": "off",
@@ -95,7 +97,6 @@ module.exports = {
 		"vars-on-top": "off",
 		"no-unused-vars": "off",
 		"no-plusplus": "off",
-		"sort-imports": "off", // there are a couple places (eg Main_Hot.tsx) where changing the import order will cause errors
 		"class-methods-use-this": "off", // class-methods do not need to "use this" to be valid/useful -- for example: React's componentDidMount
 		"no-undef": "off", // handled by typescript
 		//"react/react-in-jsx-scope": "off", // React is added as a global in my projects
@@ -115,7 +116,6 @@ module.exports = {
 		//"no-trailing-spaces": "off",
 		"no-lonely-if": "off",
 		"newline-per-chained-call": "off",
-		"import/export": "off", // it thinks typescript function-overloads are multiple exports
 		"one-var": "off",
 		"one-var-declaration-per-line": "off",
 		"no-inner-declarations": "off",
@@ -125,16 +125,17 @@ module.exports = {
 		"no-return-await": "off",
 		"max-classes-per-file": "off",
 		"block-scoped-var": "off",
-		"prefer-destructuring": "off", // too many false positives (eg. vars *meant* as single-field access/alias)
 		"no-multi-assign": "off", // limited cases where useful, but still some
 
-		// customizations
+		// rule customizations (for preferences)
+		// ==========
+
 		// only apply indent rules for the normal node-types: statements, expressions, etc. (this lets me use my special indenting for JSX)
 		"indent": [2, "tab", {
 			"flatTernaryExpressions": true,
 			"ignoredNodes": [":not(:statement):not(:expression):not(:declaration):not(:function):not(:pattern)"]
 		}],
-		"import/no-extraneous-dependencies": [1, {"devDependencies": true}],
+		//"import/no-extraneous-dependencies": [1, {"devDependencies": true}],
 		"no-restricted-syntax": [0, "ForOfStatement"], // allow for-of loops for now
 		"object-curly-spacing": [1, "never"],
 		"eol-last": [1, "never"],
@@ -143,8 +144,14 @@ module.exports = {
 		"arrow-spacing": [1, {"before": false, "after": false}],
 		"arrow-parens": [1, "as-needed"],
 		"no-trailing-spaces": [1, {"ignoreComments": true}], // needed for markdown line-break controlling in jsdoc comments
+		"prefer-const": ["error", {
+			"destructuring": "all",
+			//"ignoreReadBeforeAssign": false
+	 	}],
 
 		// plugins
+		// ==========
+
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": ["warn", { "additionalHooks": "(Use(Memo|Callback|Effect)|Watch)" }]
 	},

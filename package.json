@@ -1,8 +1,10 @@
 {
 	"name": "eslint-config-vbase",
-	"version": "1.0.8",
 	"description": "ESLint config for Javascript, by Venryx.",
+	"version": "1.0.8",
+	"author": "Venryx (https://venryx.com)",
 	"main": "index.js",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Venryx/eslint-config-vbase.git"
@@ -11,31 +13,21 @@
 		"javascript",
 		"eslint"
 	],
-	"author": {
-		"name": "Venryx",
-		"email": "venryx@gmail.com",
-		"url": "http://venryx.com"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/Venryx/eslint-config-vbase/issues"
-	},
-	"homepage": "https://github.com/Venryx/eslint-config-vbase",
 	"peerDependencies": {
 		"typescript": "^4.0.0",
 		"eslint": "^7.0.0"
 	},
 	"devDependencies": {
-		"typescript": "^4.0.0",
-		"eslint": "^7.0.0"
+		"eslint": "^7.30.0",
+		"typescript": "^4.3.5"
 	},
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^2.15.0",
-		"@typescript-eslint/parser": "^2.15.0",
+		"@typescript-eslint/eslint-plugin": "^4.28.2",
+		"@typescript-eslint/parser": "^4.28.2",
 		"eslint-config-airbnb-base": "^14.0.0",
-		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-import": "^2.23.4",
 		"eslint-plugin-only-warn": "^1.0.2",
 		"eslint-plugin-react": "^7.21.4",
-		"eslint-plugin-react-hooks": "^2.3.0"
+		"eslint-plugin-react-hooks": "^4.2.0"
 	}
 }

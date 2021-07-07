@@ -79,6 +79,7 @@ module.exports = {
 		"lines-between-class-members": "off",
 		"import/prefer-default-export": "off",
 		"import/no-mutable-exports": "off",
+		"import/newline-after-import": "off", // sometimes an import statement is desired next to runtime code, for clarity
 		"no-param-reassign": "off",
 		"camelcase": "off",
 		"no-underscore-dangle": "off",

@@ -26,7 +26,8 @@ module.exports = {
 	settings: {
 		"import/resolver": {
 			node: {
-				paths: ["Source"],
+				// see: https://www.npmjs.com/package/eslint-import-resolver-node ("an array of absolute paths which will also be searched; think NODE_PATH")
+				//paths: ["Source"],
 				extensions: [
 					".js",
 					".jsx",

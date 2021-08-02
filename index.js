@@ -128,6 +128,7 @@ module.exports = {
 		"max-classes-per-file": "off",
 		"block-scoped-var": "off",
 		"no-multi-assign": "off", // limited cases where useful, but still some
+		"key-spacing": "off",
 
 		// rule customizations (for preferences)
 		// ==========

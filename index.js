@@ -101,15 +101,12 @@ module.exports = {
 		"no-plusplus": "off",
 		"class-methods-use-this": "off", // class-methods do not need to "use this" to be valid/useful -- for example: React's componentDidMount
 		"no-undef": "off", // handled by typescript
-		//"react/react-in-jsx-scope": "off", // React is added as a global in my projects
 		"no-empty-pattern": "off",
 		"no-alert": "off",
 		"no-restricted-globals": "off",
 		"radix": "off",
 		//"no-use-before-define": [1, { "functions": false, "classes": false }],
 		"no-use-before-define": "off",
-		"react/jsx-indent": "off",
-		"react/display-name": "off",
 		"no-nested-ternary": "off",
 		"operator-linebreak": "off",
 		"no-debugger": "off",
@@ -155,6 +152,10 @@ module.exports = {
 		// plugins
 		// ==========
 
+		//"react/react-in-jsx-scope": "off", // React is added as a global in my projects
+		"react/jsx-indent": "off",
+		"react/display-name": "off",
+		"react/prop-types": "off",
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": ["warn", { "additionalHooks": "(Use(Memo|Callback|Effect)|Watch)" }]
 	},

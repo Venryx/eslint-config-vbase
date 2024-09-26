@@ -185,6 +185,7 @@ export default tseslint.config(
 			"no-var": "off",
 			"vars-on-top": "off",
 			"no-unused-vars": "off",
+			"@typescript-eslint/no-unused-vars": "off",
 			"no-plusplus": "off",
 			"class-methods-use-this": "off", // class-methods do not need to "use this" to be valid/useful -- for example: React's componentDidMount
 			"no-undef": "off", // handled by typescript
@@ -213,6 +214,10 @@ export default tseslint.config(
 			"block-scoped-var": "off",
 			"no-multi-assign": "off", // limited cases where useful, but still some
 			"key-spacing": "off",
+
+			// typescript-only
+			"@typescript-eslint/no-explicit-any": "off",
+			"@typescript-eslint/no-empty-object-type": "off",
 
 			// rule customizations (for preferences)
 			// ==========
